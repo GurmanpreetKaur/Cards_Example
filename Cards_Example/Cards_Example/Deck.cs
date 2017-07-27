@@ -52,6 +52,7 @@ namespace Cards_Example
 
         // PUBLIC METHODS
 
+
         /// <summary>
         /// This method overrides the built-in ToString method.
         /// </summary>
@@ -65,7 +66,7 @@ namespace Cards_Example
             foreach (Card card in this)
             {
                 outputString += "Deck Contains number of cards" + this.Count()+  "\n";
-
+                outputString += "==================================\n";
             }
 
             return outputString;
@@ -90,7 +91,15 @@ namespace Cards_Example
                 Card.OverWrite(this[secondCard], this[firstCard]);
                 Card.OverWrite(this[firstCard], tempCard);
             }
+        }/// <summary>
+        /// this methods returns the topcard of the deck
+        /// </summary>
+        /// <returns></returns>
+        public Card Deal1()
+        {
+            Card topCard = this[0];
+            this.RemoveAt(0);// this removes the top card from the deck
+            return topCard;
         }
-
     }
 }
