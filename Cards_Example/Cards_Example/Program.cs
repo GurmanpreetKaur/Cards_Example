@@ -7,7 +7,7 @@ using System.Threading.Tasks;
  * Name: Gurmanpreet Kaur
  * Date: July 27, 2017
  * Description: This is a demo for Lesson 11
- * Version: 0.3 - Created main progarm 
+ * Version: 0.3 - Test Shuffle method of the Deck class
  */
 
 namespace Cards_Example
@@ -16,6 +16,16 @@ namespace Cards_Example
     {
         static void Main(string[] args)
         {
+            Deck deck = new Deck();
+            Console.WriteLine("Original Deck   Number of Cards: " + deck.Count);
+            Console.WriteLine("==================================");
+            Console.WriteLine(deck.ToString());
+            Console.WriteLine();
+            deck.Shuffle();
+            Console.WriteLine("Shuffled Deck   Number of Cards: " + deck.Count);
+            Console.WriteLine("==================================");
+            Console.WriteLine(deck.ToString());
+
         }
     }
 }
