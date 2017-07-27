@@ -7,12 +7,12 @@ using System.Text;
  * Date: July 27, 2017
  * Description: This is the Deck class
  * It inherits from the List generic and uses Card as the base type
- * Version: 0.3 - Refactored Shuffle Method
+ * Version: 0.5 - Refactored the toString method
  */
 
 namespace Cards_Example
 {
-    public class Deck : List<Card>
+    public class Deck : CardList
     {
         // PRIVATE INSTANCE VARIABLES
         private Random _random;
@@ -29,16 +29,7 @@ namespace Cards_Example
 
         // PUBLIC PROPERTIES
 
-        // CONSTRUCTOR
-        /// <summary>
-        /// This is the main constructor.
-        /// </summary>
-        public Deck()
-        {
-            this._initialize();
-        }
-
-        // PRIVATE METHODS
+       
 
         /// <summary>
         /// This is the Initialize method it sets values for private variables
@@ -73,7 +64,8 @@ namespace Cards_Example
 
             foreach (Card card in this)
             {
-                outputString += "The " + card.Face + " of " + card.Suit + "\n";
+                outputString += "Deck Contains number of cards" + this.Count()+  "\n";
+
             }
 
             return outputString;
