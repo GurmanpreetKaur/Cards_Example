@@ -22,6 +22,13 @@
       <FileName>CardList.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Cards_Example.Hand">
+    <Position X="12.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Hand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="Cards_Example.Suit">
     <Position X="4" Y="0.75" Width="1.5" />
     <TypeIdentifier>

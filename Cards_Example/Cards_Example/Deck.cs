@@ -35,7 +35,7 @@ namespace Cards_Example
         /// This is the Initialize method it sets values for private variables
         /// and public properties as well as other class objects.
         /// </summary>
-        private void _initialize()
+        protected override void _initialize()
         {
             // initialize the pseudo-random number generator
             this._random = new Random();
