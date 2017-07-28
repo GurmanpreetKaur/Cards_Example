@@ -8,6 +8,7 @@ using System.Text;
  * Description: This is the Deck class
  * It inherits from the List generic and uses Card as the base type
  * Version: 0.5 - Refactored the toString method
+ *          0.6 - Added the Deal5 method
  */
 
 namespace Cards_Example
@@ -29,7 +30,7 @@ namespace Cards_Example
 
         // PUBLIC PROPERTIES
 
-       
+        // PRIVATE METHODS
 
         /// <summary>
         /// This is the Initialize method it sets values for private variables
@@ -52,7 +53,6 @@ namespace Cards_Example
 
         // PUBLIC METHODS
 
-
         /// <summary>
         /// This method overrides the built-in ToString method.
         /// </summary>
@@ -63,10 +63,12 @@ namespace Cards_Example
         {
             string outputString = "";
 
+            outputString += "Deck Contains  Number of Cards: " + this.Count + "\n";
+            outputString += "==================================\n";
+
             foreach (Card card in this)
             {
-                outputString += "Deck Contains number of cards" + this.Count()+  "\n";
-                outputString += "==================================\n";
+                outputString += "The " + card.Face + " of " + card.Suit + "\n";
             }
 
             return outputString;
@@ -91,15 +93,33 @@ namespace Cards_Example
                 Card.OverWrite(this[secondCard], this[firstCard]);
                 Card.OverWrite(this[firstCard], tempCard);
             }
-        }/// <summary>
-        /// this methods returns the topcard of the deck
+        }
+
+        /// <summary>
+        /// This method returns the top card of the deck
         /// </summary>
-        /// <returns></returns>
         public Card Deal1()
         {
             Card topCard = this[0];
-            this.RemoveAt(0);// this removes the top card from the deck
+            this.RemoveAt(0); // this removes the top card from the deck
+
+            // for testing / debugging only
+            Console.WriteLine("Dealt 1 card - Size of Deck: " + this.Count);
+
             return topCard;
+        }
+        public Hand Deal5()
+        {
+            Hand top5Cards = new Hand();
+            for (int x = 0; x <= 4; x++)
+            {
+                Card topFive = this[0];
+                top5Cards.Add(this[0]);
+                this.RemoveAt(0); //this removes the cards dealt as top five
+                Console.WriteLine("Cards Dealt: {0} = {1} of {2}  Deck size = {3}", x + 1, topFive.Suit, topFive.Face, this.Count);
+            }
+            return top5Cards;
+
         }
     }
 }

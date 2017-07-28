@@ -12,15 +12,12 @@ namespace Cards_Example
 {
     public abstract class CardList : List<Card>
     {
-        // priavte instance variables
+        // PRIVATE INSTANCE VARIABLES
 
+        // PUBLIC PROPERTIES
 
+        // CONSTRUCTORS
 
-        //public properties
-
-
-        //constructors
-        // CONSTRUCTOR
         /// <summary>
         /// This is the main constructor.
         /// </summary>
@@ -29,11 +26,12 @@ namespace Cards_Example
             this._initialize();
         }
 
-
-        //private methods
+        // PRIVATE METHODS
         protected abstract void _initialize();
 
+        // PUBLIC METHODS
 
-        //public methods
+
+        
     }
 }

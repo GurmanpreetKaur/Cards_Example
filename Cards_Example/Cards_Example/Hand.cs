@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 /*
  * Name: Gurmanpreet Kaur
  * Date: July 27, 2017
@@ -10,7 +11,7 @@ using System.Text;
  */
 namespace Cards_Example
 {
-    public class Hand :CardList
+    public class Hand : CardList
     {
         // PRIVATE INSTANCE VARIABLES
 
@@ -46,6 +47,23 @@ namespace Cards_Example
             }
 
             return outputString;
+        }
+        /// <summary>
+        /// This is the HighestCards method that 
+        /// </summary>
+        /// <param name="hand"></param>
+        public void HighestCards(Hand hand)
+        {
+            var sortedHand = from cards in hand
+                             orderby cards.Face descending
+                             select cards.Face;
+            Console.WriteLine("The Highest cards:");
+            foreach (var item in sortedHand)
+            {
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
     }
 }

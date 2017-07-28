@@ -86,5 +86,6 @@ namespace Cards_Example
             first.Face = second.Face;
             first.Suit = second.Suit;
         }
+
     }
 }
