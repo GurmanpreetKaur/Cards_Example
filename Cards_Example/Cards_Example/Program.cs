@@ -42,9 +42,11 @@ namespace Cards_Example
             Console.WriteLine("Dealt Top Five Cards");
             Console.WriteLine("==================================");
             Console.WriteLine();
-            hand = deck.Deal5(); 
-            
-           
+            hand = deck.Deal5();
+
+            Console.WriteLine(hand.ToString());
+            hand.HighestCards(hand);
+
 
         }
     }
